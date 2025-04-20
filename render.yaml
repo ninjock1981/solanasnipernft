@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: name: solana-solanasnipernft
+    env: node
+    plan: free
+    region: oregon
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: AUTH_TOKEN
+        sync: false
+      - key: MINT_LIMIT
+        sync: false
+      - key: MAX_PRICE
+        sync: false
+      - key: RPC_URL
+        sync: false
+      - key: ME_LISTING_MARKUP
+        sync: false
+      - key: LIST_ON_ME
+        sync: false
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
